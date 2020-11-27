@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class Shifts {
     @Id
     @Column(name = "sid")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int sid;
 
     @Column(name = "shift_name")

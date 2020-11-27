@@ -17,11 +17,11 @@ import lombok.Setter;
 public class Jobs {
     @Id
     @Column(name = "jid")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int jid;
 
     @Column(name = "job_name")
-    private String name;
+    private String job_name;
 
     public int getJid() {
         return jid;
@@ -31,12 +31,11 @@ public class Jobs {
         this.jid = jid;
     }
 
-    public String getName() {
-        return name;
+    public String getJob_name() {
+        return job_name;
     }
 
-    public void setName(String jobName) {
-        this.name = jobName;
+    public void setJob_name(String job_name) {
+        this.job_name = job_name;
     }
-
 }

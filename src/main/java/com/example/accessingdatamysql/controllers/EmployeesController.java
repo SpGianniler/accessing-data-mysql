@@ -17,6 +17,7 @@ public class EmployeesController {
 
     @PostMapping("/add")
     public Employees save(@RequestBody Employees employee){
+
         return employeesService.saveEmployee(employee);
     }
 
@@ -26,7 +27,7 @@ public class EmployeesController {
     @GetMapping("/all-employees")
     public List<Employees> getAllEmployees(){return employeesService.getAllEmployeesList();}
 
-    @GetMapping("/job/{eid}")
+    @GetMapping("/employee/{eid}")
     public Optional<Employees> getJob(@PathVariable(name = "eid") int eid){return employeesService.getEmployee(eid);}
 
     @DeleteMapping("/delete/{eid}")

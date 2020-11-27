@@ -13,7 +13,7 @@ import lombok.Setter;
 public class Employees {
     @Id
     @Column(name = "eid")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int eid;
 
     @Column(name = "first_name")
