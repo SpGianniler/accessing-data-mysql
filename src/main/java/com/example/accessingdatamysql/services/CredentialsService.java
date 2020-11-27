@@ -1,6 +1,7 @@
 package com.example.accessingdatamysql.services;
 
 import com.example.accessingdatamysql.entities.Credentials;
+import com.example.accessingdatamysql.entities.compositeIDs.CredentialsCID;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,7 +14,7 @@ public interface CredentialsService {
 
     List<Credentials> getAllCredentialsList();
 
-    Optional<Credentials> getCredential(String username);
+    Optional<Credentials> getCredential(CredentialsCID credentialsCID);
 
-    void  deleteCredential(String username);
+    void  deleteCredential(CredentialsCID credentialsCID);
 }

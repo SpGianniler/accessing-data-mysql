@@ -2,6 +2,7 @@ package com.example.accessingdatamysql.services.impl;
 
 import com.example.accessingdatamysql.daos.CredentialsDao;
 import com.example.accessingdatamysql.entities.Credentials;
+import com.example.accessingdatamysql.entities.compositeIDs.CredentialsCID;
 import com.example.accessingdatamysql.services.CredentialsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,12 +31,12 @@ public class CredentialsServiceImpl implements CredentialsService {
     }
 
     @Override
-    public Optional<Credentials> getCredential(String username) {
-        return credentialsDao.findById(username);
+    public Optional<Credentials> getCredential(CredentialsCID credentialsCID) {
+        return credentialsDao.findById(credentialsCID);
     }
 
     @Override
-    public void deleteCredential(String username) {
-        credentialsDao.deleteById(username);
+    public void deleteCredential(CredentialsCID credentialsCID) {
+        credentialsDao.deleteById(credentialsCID);
     }
 }

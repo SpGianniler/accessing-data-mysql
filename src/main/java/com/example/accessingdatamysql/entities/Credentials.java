@@ -1,5 +1,6 @@
 package com.example.accessingdatamysql.entities;
 
+import com.example.accessingdatamysql.entities.compositeIDs.CredentialsCID;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,6 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "credentials")
+@IdClass(CredentialsCID.class)
 @Getter
 @Setter
 public class Credentials {
@@ -14,6 +16,7 @@ public class Credentials {
     @Column(name = "username")
     private String username;
 
+    @Id
     @Column(name = "is_admin")
     private byte is_admin;
 
@@ -53,5 +56,16 @@ public class Credentials {
 
     public void setEid(int eid) {
         this.eid = eid;
+    }
+
+    public Credentials(String username, byte is_admin, String password, int eid){
+        this.username = username;
+        this.is_admin = is_admin;
+        this.password = password;
+        this.eid = eid;
+    }
+
+    public Credentials() {
+
     }
 }

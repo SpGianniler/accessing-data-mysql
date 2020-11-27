@@ -1,6 +1,7 @@
 package com.example.accessingdatamysql.controllers;
 
 import com.example.accessingdatamysql.entities.Credentials;
+import com.example.accessingdatamysql.entities.compositeIDs.CredentialsCID;
 import com.example.accessingdatamysql.services.CredentialsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,8 +25,8 @@ public class CredentialsController {
     public List<Credentials> getAllCredentials(){return credentialsService.getAllCredentialsList();}
 
     @GetMapping("/credential/{username}")
-    public Optional<Credentials> getCredential(@PathVariable(name = "username")String username){return credentialsService.getCredential(username);}
+    public Optional<Credentials> getCredential(@PathVariable(name = "username")CredentialsCID credentialsCID){return credentialsService.getCredential(credentialsCID);}
 
     @DeleteMapping("/delete/{username}")
-    public void deleteCredential(@PathVariable(name = "username")String username){credentialsService.deleteCredential(username);}
+    public void deleteCredential(@PathVariable(name = "username")CredentialsCID credentialsCID){credentialsService.deleteCredential(credentialsCID);}
 }
