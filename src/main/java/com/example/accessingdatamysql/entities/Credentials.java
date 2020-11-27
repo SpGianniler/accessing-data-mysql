@@ -14,7 +14,6 @@ public class Credentials {
     @Column(name = "username")
     private String username;
 
-    @Id
     @Column(name = "is_admin")
     private byte is_admin;
 
