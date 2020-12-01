@@ -33,8 +33,8 @@ public class CredentialsCID implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {return true;}
+        if (o == null || getClass() != o.getClass()) {return false;}
         CredentialsCID that = (CredentialsCID) o;
         return is_admin == that.is_admin &&
                 username.equals(that.username);
