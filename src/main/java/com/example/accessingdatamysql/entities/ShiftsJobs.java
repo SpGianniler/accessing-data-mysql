@@ -44,4 +44,14 @@ public class ShiftsJobs {
     public void setEmployeesneed(int employeesneed) {
         this.employeesneed = employeesneed;
     }
+
+    public ShiftsJobs(int sid, int jid, int employeesneed) {
+        this.sid = sid;
+        this.jid = jid;
+        this.employeesneed = employeesneed;
+    }
+
+    public ShiftsJobs() {
+
+    }
 }

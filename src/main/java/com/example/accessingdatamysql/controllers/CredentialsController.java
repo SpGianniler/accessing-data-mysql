@@ -24,9 +24,9 @@ public class CredentialsController {
     @GetMapping("/all-credentials")
     public List<Credentials> getAllCredentials(){return credentialsService.getAllCredentialsList();}
 
-    @GetMapping("/credential/{username}")
-    public Optional<Credentials> getCredential(@PathVariable(name = "username")CredentialsCID credentialsCID){return credentialsService.getCredential(credentialsCID);}
+    @GetMapping("/credential/{key}")
+    public Optional<Credentials> getCredential(@PathVariable(name = "key")CredentialsCID credentialsCID){return credentialsService.getCredential(credentialsCID);}
 
-    @DeleteMapping("/delete/{username}")
-    public void deleteCredential(@PathVariable(name = "username")CredentialsCID credentialsCID){credentialsService.deleteCredential(credentialsCID);}
+    @DeleteMapping("/delete/{key}")
+    public void deleteCredential(@PathVariable(name = "key")CredentialsCID credentialsCID){credentialsService.deleteCredential(credentialsCID);}
 }

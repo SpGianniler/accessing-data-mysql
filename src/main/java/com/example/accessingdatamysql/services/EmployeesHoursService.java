@@ -16,5 +16,5 @@ public interface EmployeesHoursService {
 
     void deleteEmployeesHours(EmployeesHoursCID employeesHoursCID);
 
-    List<EmployeesHours> getEmployeesHoursList();
+    List<EmployeesHours> getAllEmployeesHoursList();
 }

@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@RequestMapping("shiftsjobs")
+@RequestMapping("shifts-jobs")
 @RestController
 public class ShiftsJobsController {
-
     @Autowired
     private ShiftsJobsService shiftsJobsService;
 
@@ -22,20 +21,16 @@ public class ShiftsJobsController {
     }
 
     @PutMapping("/update")
-    public ShiftsJobs update(@RequestBody ShiftsJobs shiftsJobs) {
-        return shiftsJobsService.updateshiftsJobs(shiftsJobs);
-    }
-    @GetMapping("/all-ShiftsJobs")
+    public ShiftsJobs update(@RequestBody ShiftsJobs shiftsJobs) {return shiftsJobsService.updateshiftsJobs(shiftsJobs);}
+
+    @GetMapping("/all-Shifts-jobs")
     public List<ShiftsJobs> getAllShiftsJobs(){
         return shiftsJobsService.getAllShiftsJobsList();
     }
 
-    @GetMapping("/shiftsJobs/{sid}")
-    public Optional<ShiftsJobs> getShiftsJobs(@PathVariable(name = "sid")ShiftsJobsCID shiftsJobsCID) {
-        return shiftsJobsService.getshiftsJobs(shiftsJobsCID);
-    }
-    @DeleteMapping("/delete/{sid}")
-    public void deleteShifts(@PathVariable(name = "sid") ShiftsJobsCID shiftsJobsCID) {
-        shiftsJobsService.deleteshiftsJobs(shiftsJobsCID);
-    }
+    @GetMapping("/shifts-jobs/{key}")
+    public Optional<ShiftsJobs> getShiftsJobs(@PathVariable(name = "key")ShiftsJobsCID shiftsJobsCID) {return shiftsJobsService.getshiftsJobs(shiftsJobsCID);}
+
+    @DeleteMapping("/delete/{key}")
+    public void deleteShifts(@PathVariable(name = "key") ShiftsJobsCID shiftsJobsCID) {shiftsJobsService.deleteshiftsJobs(shiftsJobsCID);}
 }

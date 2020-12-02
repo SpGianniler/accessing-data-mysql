@@ -1,6 +1,5 @@
 package com.example.accessingdatamysql.services;
 
-
 import com.example.accessingdatamysql.entities.ShiftsJobs;
 import com.example.accessingdatamysql.entities.compositeIDs.ShiftsJobsCID;
 
@@ -11,7 +10,6 @@ public interface ShiftsJobsService {
 
     ShiftsJobs  saveShiftsJobs(ShiftsJobs shiftsJobs) ;
 
-
     ShiftsJobs  updateshiftsJobs(ShiftsJobs shiftsJobs);
 
     Optional<ShiftsJobs> getshiftsJobs(ShiftsJobsCID shiftsJobsCID) ;
@@ -19,5 +17,4 @@ public interface ShiftsJobsService {
     void deleteshiftsJobs(ShiftsJobsCID shiftsJobsCID) ;
 
     List<ShiftsJobs> getAllShiftsJobsList();
-
 }

@@ -12,8 +12,8 @@ import java.util.Objects;
 @Setter
 public class ShiftsJobsCID implements Serializable {
     private int sid;
+
     private int jid;
-    private  int employees_need;
 
     public int getSid() {
         return sid;
@@ -31,26 +31,17 @@ public class ShiftsJobsCID implements Serializable {
         this.jid = jid;
     }
 
-    public int getEmployees_need() {
-        return employees_need;
-    }
-
-    public void setEmployees_need(int employees_need) {
-        this.employees_need = employees_need;
-    }
-
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {return true;}
+        if (o == null || getClass() != o.getClass()) {return false;}
         ShiftsJobsCID that = (ShiftsJobsCID) o;
         return sid == that.sid &&
-                jid == that.jid &&
-                employees_need == that.employees_need;
+                jid == that.jid;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(sid, jid, employees_need);
+        return Objects.hash(sid, jid);
     }
 }

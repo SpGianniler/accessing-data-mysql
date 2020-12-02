@@ -1,6 +1,8 @@
 package com.example.accessingdatamysql.entities;
 
 import javax.persistence.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import lombok.Getter;
@@ -55,6 +57,12 @@ public class Employees {
     public Date getBirth_date() {
         return birth_date;
     }
+    
+//    public String getBirth_date() {
+//        Date date = birth_date;
+//        DateFormat dateFormat = new SimpleDateFormat("yyy-MM-dd");
+//        return dateFormat.format(date);
+//    }
 
     public void setBirth_date(Date birth_date) {
         this.birth_date = birth_date;

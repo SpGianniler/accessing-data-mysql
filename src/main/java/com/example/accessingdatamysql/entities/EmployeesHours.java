@@ -7,51 +7,53 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "employees_needed")
+@Table(name = "employees_hours")
 @IdClass(EmployeesHoursCID.class)
-@Setter
 @Getter
+@Setter
 public class EmployeesHours {
     @Id
-    @Column(name = "Employeeseid")
-    private int EmployeesEid;
+    @Column(name = "eid")
+    private int eid;
 
     @Id
-    @Column(name = "Shifthssid")
-    private int ShiftsSid;
+    @Column(name = "sid")
+    private int sid;
 
-    public int getEmployeesEid() {
-        return EmployeesEid;
+    @Column(name = "hours_worked")
+    private int hours_worked;
+
+    public int getEid() {
+        return eid;
     }
 
-    public void setEmployeesEid(int employeesEid) {
-        EmployeesEid = employeesEid;
+    public void setEid(int eid) {
+        this.eid = eid;
     }
 
-    public int getShiftsSid() {
-        return ShiftsSid;
+    public int getSid() {
+        return sid;
     }
 
-    public void setShiftsSid(int shiftsSid) {
-        ShiftsSid = shiftsSid;
+    public void setSid(int sid) {
+        this.sid = sid;
     }
 
-//    public int saveEmployeesHoursDao(EmployeesHours employeesHours){
-//        return 0;
-//    }
-//
-//
-//    public int  updateEmployeesHours(EmployeesHours employeesHours){
-//        return 0;
-//    }
-//
-//    public int List<EmployeesHours> getAllEmployeesHoursList(){
-//
-//    }
-//
-//    public int Optional<EmployeesHours> getEmployeesHours(){
-//
-//    }
-//
-//    public  void deleteEmployeesHours(int EmployeesEid){}
+    public int getHours_worked() {
+        return hours_worked;
+    }
+
+    public void setHours_worked(int hours_worked) {
+        this.hours_worked = hours_worked;
+    }
+
+    public EmployeesHours(int eid, int sid, int hours_worked) {
+        this.eid = eid;
+        this.sid = sid;
+        this.hours_worked = hours_worked;
+    }
+
+    public EmployeesHours() {
+
+    }
 }

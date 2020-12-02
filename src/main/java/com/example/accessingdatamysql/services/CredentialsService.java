@@ -12,9 +12,9 @@ public interface CredentialsService {
 
     Credentials updateCredential(Credentials credential);
 
-    List<Credentials> getAllCredentialsList();
-
     Optional<Credentials> getCredential(CredentialsCID credentialsCID);
 
-    void  deleteCredential(CredentialsCID credentialsCID);
+    void deleteCredential(CredentialsCID credentialsCID);
+
+    List<Credentials> getAllCredentialsList();
 }

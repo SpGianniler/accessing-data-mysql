@@ -26,6 +26,11 @@ public class ShiftsJobsServicelmpl implements ShiftsJobsService {
     }
 
     @Override
+    public List<ShiftsJobs> getAllShiftsJobsList() {
+        return shiftsJobsDao.findAll();
+    }
+
+    @Override
     public Optional<ShiftsJobs> getshiftsJobs(ShiftsJobsCID shiftsJobsCID) {
         return shiftsJobsDao.findById(shiftsJobsCID);
     }
@@ -33,11 +38,6 @@ public class ShiftsJobsServicelmpl implements ShiftsJobsService {
     @Override
     public void deleteshiftsJobs(ShiftsJobsCID shiftsJobsCID) {
         shiftsJobsDao.deleteById(shiftsJobsCID);
-    }
-
-    @Override
-    public List<ShiftsJobs> getAllShiftsJobsList() {
-        return shiftsJobsDao.findAll();
     }
 }
 

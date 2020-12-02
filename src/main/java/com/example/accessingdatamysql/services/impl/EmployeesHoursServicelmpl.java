@@ -1,6 +1,5 @@
 package com.example.accessingdatamysql.services.impl;
 
-
 import com.example.accessingdatamysql.daos.EmployeesHoursDao;
 import com.example.accessingdatamysql.entities.EmployeesHours;
 import com.example.accessingdatamysql.entities.compositeIDs.EmployeesHoursCID;
@@ -13,7 +12,6 @@ import java.util.Optional;
 
 @Service
 public class EmployeesHoursServicelmpl implements EmployeesHoursService {
-
     @Autowired
     private EmployeesHoursDao employeeshoursDao;
 
@@ -28,18 +26,15 @@ public class EmployeesHoursServicelmpl implements EmployeesHoursService {
     }
 
     @Override
-    public Optional<EmployeesHours> getEmployeesHours(EmployeesHoursCID employeesHoursCID) {
-        return Optional.empty();
-    }
-
-    @Override
-    public void deleteEmployeesHours(EmployeesHoursCID employeesHoursCID) {
-        employeeshoursDao.deleteById(employeesHoursCID);
-    }
-
-    @Override
-    public List<EmployeesHours> getEmployeesHoursList() {
+    public List<EmployeesHours> getAllEmployeesHoursList() {
         return employeeshoursDao.findAll();
     }
 
+    @Override
+    public Optional<EmployeesHours> getEmployeesHours(EmployeesHoursCID employeesHoursCID) {
+        return employeeshoursDao.findById(employeesHoursCID);
+    }
+
+    @Override
+    public void deleteEmployeesHours(EmployeesHoursCID employeesHoursCID) { employeeshoursDao.deleteById(employeesHoursCID); }
 }
