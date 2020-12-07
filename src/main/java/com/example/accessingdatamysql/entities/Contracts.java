@@ -1,10 +1,15 @@
 package com.example.accessingdatamysql.entities;
 
+import org.joda.time.DateTime;
+import org.joda.time.Interval;
+import org.joda.time.LocalDate;
+
 import javax.persistence.*;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 @Entity
-@Table(name = "Contracts")
+@Table(name = "contracts")
 public class Contracts {
     @Id
     @Column(name = "start_date")
@@ -15,6 +20,9 @@ public class Contracts {
 
     @Column(name = "type")
     private String type;
+
+    @Column(name = "hours")
+    private int hours;
 
     @Column(name = "eid")
     private int eid;
@@ -49,5 +57,39 @@ public class Contracts {
 
     public void setEid(int eid) {
         this.eid = eid;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public int checkContractDetails()
+    {
+        try{
+            if (this.type.equals("full")) {
+                this.hours = 56;
+            } else if (this.type.equals("part"))
+                this.hours = 28;
+        }
+        catch (NullPointerException e){
+            e.printStackTrace();
+        }
+        return this.hours;
+    }
+
+    public void endOfContract(){
+        Date today = LocalDate.now().toDate();
+
+        if(today.compareTo(this.end_date)>=0){
+            // TODO: 07/12/2020 send notification to admin and corresponding employee
+        }
+    }
+
+    public boolean compareStartToEndDate(){
+        return !this.start_date.after(end_date);
     }
 }
