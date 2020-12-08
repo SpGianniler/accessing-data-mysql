@@ -68,4 +68,35 @@ public class Credentials {
     public Credentials() {
 
     }
+
+    public boolean checkPasswordValidity(){
+        boolean space = true;
+        boolean spChar = true;
+        boolean length = true;
+        if (!this.password.contains(" ")){
+            space = false;
+            System.out.println("Password contains one or more spaces");
+        }
+
+        if(!(this.password.contains("@") || this.password.contains("#")
+                || this.password.contains("!") || this.password.contains("~")
+                || this.password.contains("$") || this.password.contains("%")
+                || this.password.contains("^") || this.password.contains("&")
+                || this.password.contains("*") || this.password.contains("(")
+                || this.password.contains(")") || this.password.contains("-")
+                || this.password.contains("+") || this.password.contains("/")
+                || this.password.contains(":") || this.password.contains(".")
+                || this.password.contains(", ") || this.password.contains("<")
+                || this.password.contains(">") || this.password.contains("?")
+                || this.password.contains("|"))){
+            spChar = false;
+            System.out.println("Password does not contain any special characters (@,#,!,$,etc)");
+        }
+
+        if (!(this.password.length() >= 6 && this.password.length() <= 18)){
+            length = false;
+            System.out.println("Password is not between 6-18 characters long");
+        }
+        return (length && spChar && space);
+    }
 }

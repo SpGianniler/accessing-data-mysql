@@ -1,11 +1,8 @@
 package com.example.accessingdatamysql.entities;
 
-import org.joda.time.DateTime;
-import org.joda.time.Interval;
-import org.joda.time.LocalDate;
-
 import javax.persistence.*;
-import java.time.format.DateTimeFormatter;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 @Entity
@@ -82,11 +79,15 @@ public class Contracts {
     }
 
     public void endOfContract(){
-        Date today = LocalDate.now().toDate();
-
-        if(today.compareTo(this.end_date)>=0){
+        //if(contractIsActive())
+        if(ChronoUnit.DAYS.between(LocalDate.now(), (java.time.temporal.Temporal) this.end_date)<=0){
             // TODO: 07/12/2020 send notification to admin and corresponding employee
         }
+    }
+
+    public boolean contractIsActive(){
+        // TODO: 08/12/2020 create a boolean field in the contracts table to check if the contract is active or not
+        return true;
     }
 
     public boolean compareStartToEndDate(){
