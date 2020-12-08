@@ -17,5 +17,9 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: Go setup
+      uses: actions/setup-go@v2
+    - name: Add module
+      run: go mod init https://github.com/SpGianniler/accessing-data-mysql
     - name: Run the Maven verify phase
       run:   mvn -B package --file pom.xml
