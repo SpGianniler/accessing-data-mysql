@@ -1,6 +1,7 @@
 package com.example.accessingdatamysql.entities;
 
 import com.example.accessingdatamysql.entities.compositeIDs.CredentialsCID;
+import jdk.incubator.jpackage.internal.Log;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -67,5 +68,36 @@ public class Credentials {
 
     public Credentials() {
 
+    }
+
+    public boolean checkPasswordValidity(){
+        boolean space = true;
+        boolean spChar = true;
+        boolean length = true;
+        if (!this.password.contains(" ")){
+            space = false;
+            Log.error("Password contains one or more spaces");
+        }
+
+        if(!(this.password.contains("@") || this.password.contains("#")
+                || this.password.contains("!") || this.password.contains("~")
+                || this.password.contains("$") || this.password.contains("%")
+                || this.password.contains("^") || this.password.contains("&")
+                || this.password.contains("*") || this.password.contains("(")
+                || this.password.contains(")") || this.password.contains("-")
+                || this.password.contains("+") || this.password.contains("/")
+                || this.password.contains(":") || this.password.contains(".")
+                || this.password.contains(", ") || this.password.contains("<")
+                || this.password.contains(">") || this.password.contains("?")
+                || this.password.contains("|"))){
+            spChar = false;
+            Log.error("Password does not contain any special characters (@,#,!,$,etc)");
+        }
+
+        if (!(this.password.length() >= 6 && this.password.length() <= 18)){
+            length = false;
+            Log.error("Password is not between 6-18 characters long");
+        }
+        return (length && spChar && space);
     }
 }

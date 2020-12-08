@@ -3,6 +3,8 @@ package com.example.accessingdatamysql.entities;
 import javax.persistence.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.*;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import lombok.Getter;
@@ -74,5 +76,10 @@ public class Employees {
 
     public void setJid(int jid) {
         this.jid = jid;
+    }
+
+    // do not allow employees of age 16 or lower
+    public boolean checkBirthDateValidity(){
+        return ChronoUnit.YEARS.between(LocalDate.now(), (java.time.temporal.Temporal) this.birth_date) >= 16;
     }
 }
