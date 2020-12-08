@@ -1,7 +1,6 @@
 package com.example.accessingdatamysql.entities;
 
 import com.example.accessingdatamysql.entities.compositeIDs.CredentialsCID;
-import jdk.internal.org.jline.utils.Log;
 import lombok.Getter;
 import lombok.Setter;
 
