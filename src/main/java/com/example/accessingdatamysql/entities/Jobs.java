@@ -38,4 +38,8 @@ public class Jobs {
     public void setJob_name(String job_name) {
         this.job_name = job_name;
     }
+    public boolean checkForEmptyJobName() {
+        return job_name.isEmpty() || job_name == null;
+    }
+
 }

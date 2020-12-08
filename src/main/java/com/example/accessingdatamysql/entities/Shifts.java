@@ -33,4 +33,21 @@ public class Shifts {
     public void setShift_name(String shift_name) {
         this.shift_name = shift_name;
     }
+
+    public String checkShiftsDetails()
+    {
+        try{
+            if (this.sid == 1) {
+                this.shift_name = shift_name;
+            } else if (this.sid == 2){
+                this.shift_name = shift_name;
+            }else {
+                this.shift_name = shift_name;
+            }
+        }
+        catch (NullPointerException s){
+            s.printStackTrace();
+        }
+        return this.shift_name;
+    }
 }
