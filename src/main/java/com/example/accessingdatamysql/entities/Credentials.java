@@ -1,6 +1,7 @@
 package com.example.accessingdatamysql.entities;
 
 import com.example.accessingdatamysql.entities.compositeIDs.CredentialsCID;
+import com.sun.tools.sjavac.Log;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -75,7 +76,7 @@ public class Credentials {
         boolean length = true;
         if (!this.password.contains(" ")){
             space = false;
-            System.out.println("Password contains one or more spaces");
+            Log.error("Password contains one or more spaces");
         }
 
         if(!(this.password.contains("@") || this.password.contains("#")
@@ -90,12 +91,12 @@ public class Credentials {
                 || this.password.contains(">") || this.password.contains("?")
                 || this.password.contains("|"))){
             spChar = false;
-            System.out.println("Password does not contain any special characters (@,#,!,$,etc)");
+            Log.error("Password does not contain any special characters (@,#,!,$,etc)");
         }
 
         if (!(this.password.length() >= 6 && this.password.length() <= 18)){
             length = false;
-            System.out.println("Password is not between 6-18 characters long");
+            Log.error("Password is not between 6-18 characters long");
         }
         return (length && spChar && space);
     }
