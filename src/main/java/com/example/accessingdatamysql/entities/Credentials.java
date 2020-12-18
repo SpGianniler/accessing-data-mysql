@@ -86,7 +86,7 @@ public class Credentials {
                 || this.password.contains(")") || this.password.contains("-")
                 || this.password.contains("+") || this.password.contains("/")
                 || this.password.contains(":") || this.password.contains(".")
-                || this.password.contains(", ") || this.password.contains("<")
+                || this.password.contains(",") || this.password.contains("<")
                 || this.password.contains(">") || this.password.contains("?")
                 || this.password.contains("|"))){
             spChar = false;
