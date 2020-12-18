@@ -1,10 +1,13 @@
 package com.example.accessingdatamysql.entities;
 
 import javax.persistence.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,6 +28,7 @@ public class Employees {
     private String last_name;
 
     @Column(name = "birth_date")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-mm-dd")
     private Date birth_date;
 
     @Column(name = "jid")
@@ -60,7 +64,7 @@ public class Employees {
     
 //    public String getBirth_date() {
 //        Date date = birth_date;
-//        DateFormat dateFormat = new SimpleDateFormat("yyy-MM-dd");
+//        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 //        return dateFormat.format(date);
 //    }
 

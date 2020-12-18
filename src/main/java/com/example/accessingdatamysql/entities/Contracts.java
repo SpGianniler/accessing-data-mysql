@@ -1,5 +1,7 @@
 package com.example.accessingdatamysql.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -10,9 +12,11 @@ import java.util.Date;
 public class Contracts {
     @Id
     @Column(name = "start_date")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-mm-dd")
     private Date start_date;
 
     @Column(name = "end_date")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-mm-dd")
     private Date end_date;
 
     @Column(name = "type")

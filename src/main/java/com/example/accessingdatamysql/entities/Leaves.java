@@ -1,5 +1,6 @@
 package com.example.accessingdatamysql.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sun.xml.bind.v2.TODO;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,6 +23,7 @@ public class Leaves {
     private int lid;
 
     @Column(name = "leave_date")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-mm-dd")
     private Date leave_date;
 
     @Column(name = "eid")
