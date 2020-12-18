@@ -2,7 +2,7 @@ package com.example.accessingdatamysql.services;
 
 
 
-import com.example.accessingdatamysql.entities.Shifts;
+import com.example.accessingdatamysql.model.Shifts;
 
 import java.util.List;
 import java.util.Optional;

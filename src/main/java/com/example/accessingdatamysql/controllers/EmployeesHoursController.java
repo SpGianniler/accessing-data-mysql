@@ -1,7 +1,7 @@
 package com.example.accessingdatamysql.controllers;
 
-import com.example.accessingdatamysql.entities.EmployeesHours;
-import com.example.accessingdatamysql.entities.compositeIDs.EmployeesHoursCID;
+import com.example.accessingdatamysql.model.EmployeesHours;
+import com.example.accessingdatamysql.model.compositeIDs.EmployeesHoursCID;
 import com.example.accessingdatamysql.services.EmployeesHoursService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
 package com.example.accessingdatamysql.controllers;
 
-import com.example.accessingdatamysql.entities.Contracts;
+import com.example.accessingdatamysql.model.Contracts;
 import com.example.accessingdatamysql.services.ContractsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

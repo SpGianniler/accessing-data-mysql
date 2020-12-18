@@ -1,6 +1,6 @@
 package com.example.accessingdatamysql.services;
 
-import com.example.accessingdatamysql.entities.Leaves;
+import com.example.accessingdatamysql.model.Leaves;
 
 import java.util.List;
 import java.util.Optional;

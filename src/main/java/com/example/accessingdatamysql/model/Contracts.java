@@ -1,4 +1,4 @@
-package com.example.accessingdatamysql.entities;
+package com.example.accessingdatamysql.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 

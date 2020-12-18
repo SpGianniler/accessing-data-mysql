@@ -1,8 +1,6 @@
-package com.example.accessingdatamysql.entities;
+package com.example.accessingdatamysql.model;
 
 import javax.persistence.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;

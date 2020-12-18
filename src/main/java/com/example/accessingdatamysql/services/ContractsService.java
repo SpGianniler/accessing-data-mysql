@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import com.example.accessingdatamysql.entities.Contracts;
+import com.example.accessingdatamysql.model.Contracts;
 
 public interface ContractsService {
     Contracts saveContract(Contracts contract);

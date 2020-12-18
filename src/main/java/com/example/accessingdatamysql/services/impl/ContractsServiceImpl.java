@@ -1,7 +1,7 @@
 package com.example.accessingdatamysql.services.impl;
 
-import com.example.accessingdatamysql.daos.ContractsDao;
-import com.example.accessingdatamysql.entities.Contracts;
+import com.example.accessingdatamysql.dao.ContractsDao;
+import com.example.accessingdatamysql.model.Contracts;
 import com.example.accessingdatamysql.services.ContractsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.accessingdatamysql.entities.Jobs;
+import com.example.accessingdatamysql.model.Jobs;
 import com.example.accessingdatamysql.services.JobsService;
 
 @RequestMapping("jobs")

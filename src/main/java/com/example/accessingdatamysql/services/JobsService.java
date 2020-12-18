@@ -3,7 +3,7 @@ package com.example.accessingdatamysql.services;
 import java.util.List;
 import java.util.Optional;
 
-import com.example.accessingdatamysql.entities.Jobs;
+import com.example.accessingdatamysql.model.Jobs;
 
 public interface JobsService {
 

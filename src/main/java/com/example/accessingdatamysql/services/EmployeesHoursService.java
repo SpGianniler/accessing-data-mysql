@@ -1,7 +1,7 @@
 package com.example.accessingdatamysql.services;
 
-import com.example.accessingdatamysql.entities.EmployeesHours;
-import com.example.accessingdatamysql.entities.compositeIDs.EmployeesHoursCID;
+import com.example.accessingdatamysql.model.EmployeesHours;
+import com.example.accessingdatamysql.model.compositeIDs.EmployeesHoursCID;
 
 import java.util.List;
 import java.util.Optional;

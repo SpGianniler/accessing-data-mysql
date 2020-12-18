@@ -1,7 +1,7 @@
 package com.example.accessingdatamysql.controllers;
 
-import com.example.accessingdatamysql.entities.Credentials;
-import com.example.accessingdatamysql.entities.compositeIDs.CredentialsCID;
+import com.example.accessingdatamysql.model.Credentials;
+import com.example.accessingdatamysql.model.compositeIDs.CredentialsCID;
 import com.example.accessingdatamysql.services.CredentialsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

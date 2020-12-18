@@ -1,6 +1,6 @@
 package com.example.accessingdatamysql.controllers;
 
-import com.example.accessingdatamysql.entities.Leaves;
+import com.example.accessingdatamysql.model.Leaves;
 import com.example.accessingdatamysql.services.LeavesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

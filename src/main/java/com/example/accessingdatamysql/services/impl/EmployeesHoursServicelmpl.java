@@ -1,8 +1,8 @@
 package com.example.accessingdatamysql.services.impl;
 
-import com.example.accessingdatamysql.daos.EmployeesHoursDao;
-import com.example.accessingdatamysql.entities.EmployeesHours;
-import com.example.accessingdatamysql.entities.compositeIDs.EmployeesHoursCID;
+import com.example.accessingdatamysql.dao.EmployeesHoursDao;
+import com.example.accessingdatamysql.model.EmployeesHours;
+import com.example.accessingdatamysql.model.compositeIDs.EmployeesHoursCID;
 import com.example.accessingdatamysql.services.EmployeesHoursService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

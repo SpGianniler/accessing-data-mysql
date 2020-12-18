@@ -1,4 +1,4 @@
-package com.example.accessingdatamysql.entities.compositeIDs;
+package com.example.accessingdatamysql.model.compositeIDs;
 
 import lombok.Getter;
 import lombok.Setter;

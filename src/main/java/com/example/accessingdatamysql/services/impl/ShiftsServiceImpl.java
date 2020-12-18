@@ -1,7 +1,7 @@
 package com.example.accessingdatamysql.services.impl;
 
-import com.example.accessingdatamysql.daos.ShiftsDao;
-import com.example.accessingdatamysql.entities.Shifts;
+import com.example.accessingdatamysql.dao.ShiftsDao;
+import com.example.accessingdatamysql.model.Shifts;
 import com.example.accessingdatamysql.services.ShiftsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

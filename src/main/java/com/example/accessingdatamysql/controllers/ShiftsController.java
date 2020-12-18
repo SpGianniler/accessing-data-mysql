@@ -1,6 +1,6 @@
 package com.example.accessingdatamysql.controllers;
 
-import com.example.accessingdatamysql.entities.Shifts;
+import com.example.accessingdatamysql.model.Shifts;
 import com.example.accessingdatamysql.services.ShiftsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

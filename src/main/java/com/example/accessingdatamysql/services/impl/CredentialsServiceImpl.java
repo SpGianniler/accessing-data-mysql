@@ -1,8 +1,8 @@
 package com.example.accessingdatamysql.services.impl;
 
-import com.example.accessingdatamysql.daos.CredentialsDao;
-import com.example.accessingdatamysql.entities.Credentials;
-import com.example.accessingdatamysql.entities.compositeIDs.CredentialsCID;
+import com.example.accessingdatamysql.dao.CredentialsDao;
+import com.example.accessingdatamysql.model.Credentials;
+import com.example.accessingdatamysql.model.compositeIDs.CredentialsCID;
 import com.example.accessingdatamysql.services.CredentialsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

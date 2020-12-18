@@ -1,7 +1,7 @@
 package com.example.accessingdatamysql.services.impl;
 
-import com.example.accessingdatamysql.daos.LeavesDao;
-import com.example.accessingdatamysql.entities.Leaves;
+import com.example.accessingdatamysql.dao.LeavesDao;
+import com.example.accessingdatamysql.model.Leaves;
 import com.example.accessingdatamysql.services.LeavesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

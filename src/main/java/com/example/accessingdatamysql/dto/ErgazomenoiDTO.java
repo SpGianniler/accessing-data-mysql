@@ -1,4 +1,4 @@
-package com.example.accessingdatamysql.dtos;
+package com.example.accessingdatamysql.dto;
 
 public class ErgazomenoiDTO {
     protected int eid;

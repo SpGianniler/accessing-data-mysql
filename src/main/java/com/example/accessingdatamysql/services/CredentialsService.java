@@ -1,7 +1,7 @@
 package com.example.accessingdatamysql.services;
 
-import com.example.accessingdatamysql.entities.Credentials;
-import com.example.accessingdatamysql.entities.compositeIDs.CredentialsCID;
+import com.example.accessingdatamysql.model.Credentials;
+import com.example.accessingdatamysql.model.compositeIDs.CredentialsCID;
 
 import java.util.List;
 import java.util.Optional;

@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.accessingdatamysql.daos.JobsDao;
-import com.example.accessingdatamysql.entities.Jobs;
+import com.example.accessingdatamysql.dao.JobsDao;
+import com.example.accessingdatamysql.model.Jobs;
 import com.example.accessingdatamysql.services.JobsService;
 
 @Service

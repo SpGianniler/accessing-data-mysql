@@ -1,7 +1,7 @@
 package com.example.accessingdatamysql.services;
 
-import com.example.accessingdatamysql.entities.ShiftsJobs;
-import com.example.accessingdatamysql.entities.compositeIDs.ShiftsJobsCID;
+import com.example.accessingdatamysql.model.ShiftsJobs;
+import com.example.accessingdatamysql.model.compositeIDs.ShiftsJobsCID;
 
 import java.util.List;
 import java.util.Optional;

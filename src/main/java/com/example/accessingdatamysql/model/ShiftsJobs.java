@@ -1,6 +1,6 @@
-package com.example.accessingdatamysql.entities;
+package com.example.accessingdatamysql.model;
 
-import com.example.accessingdatamysql.entities.compositeIDs.ShiftsJobsCID;
+import com.example.accessingdatamysql.model.compositeIDs.ShiftsJobsCID;
 import lombok.Getter;
 import lombok.Setter;
 

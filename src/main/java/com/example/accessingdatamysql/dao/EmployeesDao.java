@@ -1,6 +1,6 @@
-package com.example.accessingdatamysql.daos;
+package com.example.accessingdatamysql.dao;
 
-import com.example.accessingdatamysql.entities.Employees;
+import com.example.accessingdatamysql.model.Employees;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

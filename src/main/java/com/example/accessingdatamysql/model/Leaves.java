@@ -1,7 +1,6 @@
-package com.example.accessingdatamysql.entities;
+package com.example.accessingdatamysql.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.sun.xml.bind.v2.TODO;
 import lombok.Getter;
 import lombok.Setter;
 
