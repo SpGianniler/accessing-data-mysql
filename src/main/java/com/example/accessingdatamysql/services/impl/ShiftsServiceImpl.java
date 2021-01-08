@@ -1,6 +1,6 @@
 package com.example.accessingdatamysql.services.impl;
 
-import com.example.accessingdatamysql.dao.ShiftsDao;
+import com.example.accessingdatamysql.repositories.ShiftsRepo;
 import com.example.accessingdatamysql.model.Shifts;
 import com.example.accessingdatamysql.services.ShiftsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,30 +12,30 @@ import java.util.Optional;
 @Service
 public class ShiftsServiceImpl implements ShiftsService {
     @Autowired
-    ShiftsDao shiftsDao;
+    ShiftsRepo shiftsRepo;
 
     @Override
     public Shifts saveShift(Shifts shift) {
-        return shiftsDao.save(shift);
+        return shiftsRepo.save(shift);
     }
 
     @Override
     public Shifts updateShift(Shifts shift) {
-        return shiftsDao.saveAndFlush(shift);
+        return shiftsRepo.saveAndFlush(shift);
     }
 
     @Override
     public List<Shifts> getAllShiftsList() {
-        return shiftsDao.findAll();
+        return shiftsRepo.findAll();
     }
 
     @Override
     public Optional<Shifts> getShift(int sid) {
-        return shiftsDao.findById(sid);
+        return shiftsRepo.findById(sid);
     }
 
     @Override
     public void deleteShift(int sid) {
-        shiftsDao.deleteById(sid);
+        shiftsRepo.deleteById(sid);
     }
 }

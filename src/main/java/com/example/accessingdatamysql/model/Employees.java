@@ -32,6 +32,17 @@ public class Employees {
     @Column(name = "jid")
     private int jid;
 
+    public Employees() {
+    }
+
+    public Employees(int eid, String first_name, String last_name, Date birth_date, int jid) {
+        this.eid = eid;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.birth_date = birth_date;
+        this.jid = jid;
+    }
+
     public int getEid() {
         return eid;
     }

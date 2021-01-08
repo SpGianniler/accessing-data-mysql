@@ -1,6 +1,6 @@
 package com.example.accessingdatamysql.services.impl;
 
-import com.example.accessingdatamysql.dao.ShiftsjobsDao;
+import com.example.accessingdatamysql.repositories.ShiftsjobsRepo;
 import com.example.accessingdatamysql.model.ShiftsJobs;
 import com.example.accessingdatamysql.model.compositeIDs.ShiftsJobsCID;
 import com.example.accessingdatamysql.services.ShiftsJobsService;
@@ -13,31 +13,31 @@ import java.util.Optional;
 @Service
 public class ShiftsJobsServicelmpl implements ShiftsJobsService {
     @Autowired
-    private ShiftsjobsDao shiftsJobsDao;
+    private ShiftsjobsRepo shiftsJobsRepo;
 
     @Override
     public ShiftsJobs saveShiftsJobs(ShiftsJobs shiftsJobs) {
-        return shiftsJobsDao.save(shiftsJobs);
+        return shiftsJobsRepo.save(shiftsJobs);
     }
 
     @Override
     public ShiftsJobs updateshiftsJobs(ShiftsJobs shiftsJobs) {
-        return shiftsJobsDao.saveAndFlush(shiftsJobs);
+        return shiftsJobsRepo.saveAndFlush(shiftsJobs);
     }
 
     @Override
     public List<ShiftsJobs> getAllShiftsJobsList() {
-        return shiftsJobsDao.findAll();
+        return shiftsJobsRepo.findAll();
     }
 
     @Override
     public Optional<ShiftsJobs> getshiftsJobs(ShiftsJobsCID shiftsJobsCID) {
-        return shiftsJobsDao.findById(shiftsJobsCID);
+        return shiftsJobsRepo.findById(shiftsJobsCID);
     }
 
     @Override
     public void deleteshiftsJobs(ShiftsJobsCID shiftsJobsCID) {
-        shiftsJobsDao.deleteById(shiftsJobsCID);
+        shiftsJobsRepo.deleteById(shiftsJobsCID);
     }
 }
 

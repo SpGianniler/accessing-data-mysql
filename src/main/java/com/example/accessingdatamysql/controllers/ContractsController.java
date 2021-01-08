@@ -26,7 +26,7 @@ public class ContractsController {
         return contractsService.updateContract(contract);
     }
 
-    @GetMapping("/all-contracts")
+    @GetMapping("/all")
     public List<Contracts> getAllContracts(){
         return contractsService.getAllContractsList();
     }

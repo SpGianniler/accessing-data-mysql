@@ -15,4 +15,6 @@ public interface EmployeesService {
     Optional<Employees> getEmployee(int eid);
 
     void deleteEmployee(int eid);
+
+//   List<Employees> getCustomErgazomenoi();
 }

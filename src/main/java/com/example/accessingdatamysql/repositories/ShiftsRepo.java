@@ -1,9 +1,9 @@
-package com.example.accessingdatamysql.dao;
+package com.example.accessingdatamysql.repositories;
 
 import com.example.accessingdatamysql.model.Shifts;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ShiftsDao extends JpaRepository<Shifts,Integer> {
+public interface ShiftsRepo extends JpaRepository<Shifts,Integer> {
 }

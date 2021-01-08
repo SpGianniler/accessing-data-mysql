@@ -1,6 +1,6 @@
 package com.example.accessingdatamysql.services.impl;
 
-import com.example.accessingdatamysql.dao.ContractsDao;
+import com.example.accessingdatamysql.repositories.ContractsRepo;
 import com.example.accessingdatamysql.model.Contracts;
 import com.example.accessingdatamysql.services.ContractsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,30 +13,30 @@ import java.util.Optional;
 @Service
 public class ContractsServiceImpl implements ContractsService {
     @Autowired
-    private ContractsDao contractsDao;
+    private ContractsRepo contractsRepo;
 
     @Override
     public Contracts saveContract(Contracts contract) {
-        return contractsDao.save(contract);
+        return contractsRepo.save(contract);
     }
 
     @Override
     public Contracts updateContract(Contracts contract) {
-        return contractsDao.saveAndFlush(contract);
+        return contractsRepo.saveAndFlush(contract);
     }
 
     @Override
     public List<Contracts> getAllContractsList() {
-        return contractsDao.findAll();
+        return contractsRepo.findAll();
     }
 
     @Override
     public Optional<Contracts> getContract(Date start_date) {
-        return contractsDao.findById(start_date);
+        return contractsRepo.findById(start_date);
     }
 
     @Override
     public void deleteContract(Date start_date) {
-        contractsDao.deleteById(start_date);
+        contractsRepo.deleteById(start_date);
     }
 }
