@@ -26,7 +26,7 @@ public class EmployeesController {
 //    @GetMapping("/custom-employees")
 //    public List<EmployeesCustomDTO> getAllCustomEmployees(){return employeesService.getCustomErgazomenoi();}
 
-    @GetMapping("/all-employees")
+    @GetMapping("/all")
     public List<Employees> getAllEmployees(){return employeesService.getAllEmployeesList();}
 
     @GetMapping("/employee/{eid}")
