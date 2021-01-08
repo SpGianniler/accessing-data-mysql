@@ -24,7 +24,7 @@ public class ShiftsController {
         return shiftsService.updateShift(shift);
     }
 
-    @GetMapping("/all-shifts")
+    @GetMapping("/all")
     public List<Shifts> getAllShifts(){
         return shiftsService.getAllShiftsList();
     }

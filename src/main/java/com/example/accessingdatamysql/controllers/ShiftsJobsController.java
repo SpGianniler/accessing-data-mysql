@@ -23,7 +23,7 @@ public class ShiftsJobsController {
     @PutMapping("/update")
     public ShiftsJobs update(@RequestBody ShiftsJobs shiftsJobs) {return shiftsJobsService.updateshiftsJobs(shiftsJobs);}
 
-    @GetMapping("/all-Shifts-jobs")
+    @GetMapping("/all")
     public List<ShiftsJobs> getAllShiftsJobs(){
         return shiftsJobsService.getAllShiftsJobsList();
     }

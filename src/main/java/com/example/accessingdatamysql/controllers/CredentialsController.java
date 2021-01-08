@@ -21,7 +21,7 @@ public class CredentialsController {
     @PutMapping("/update")
     public Credentials update(@RequestBody Credentials credential){return credentialsService.updateCredential(credential);}
 
-    @GetMapping("/all-credentials")
+    @GetMapping("/all")
     public List<Credentials> getAllCredentials(){return credentialsService.getAllCredentialsList();}
 
     @GetMapping("/credential/{key}")

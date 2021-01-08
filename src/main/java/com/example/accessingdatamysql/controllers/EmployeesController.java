@@ -17,12 +17,14 @@ public class EmployeesController {
 
     @PostMapping("/add")
     public Employees save(@RequestBody Employees employee){
-
         return employeesService.saveEmployee(employee);
     }
 
     @PutMapping("/update")
     public Employees update(@RequestBody Employees employee){return  employeesService.updateEmployee(employee);}
+//
+//    @GetMapping("/custom-employees")
+//    public List<EmployeesCustomDTO> getAllCustomEmployees(){return employeesService.getCustomErgazomenoi();}
 
     @GetMapping("/all-employees")
     public List<Employees> getAllEmployees(){return employeesService.getAllEmployeesList();}

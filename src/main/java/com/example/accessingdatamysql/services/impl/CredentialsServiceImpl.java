@@ -1,6 +1,6 @@
 package com.example.accessingdatamysql.services.impl;
 
-import com.example.accessingdatamysql.dao.CredentialsDao;
+import com.example.accessingdatamysql.repositories.CredentialsRepo;
 import com.example.accessingdatamysql.model.Credentials;
 import com.example.accessingdatamysql.model.compositeIDs.CredentialsCID;
 import com.example.accessingdatamysql.services.CredentialsService;
@@ -13,30 +13,30 @@ import java.util.Optional;
 @Service
 public class CredentialsServiceImpl implements CredentialsService {
     @Autowired
-    private CredentialsDao credentialsDao;
+    private CredentialsRepo credentialsRepo;
 
     @Override
     public Credentials saveCredential(Credentials credential) {
-        return credentialsDao.save(credential);
+        return credentialsRepo.save(credential);
     }
 
     @Override
     public Credentials updateCredential(Credentials credential) {
-        return credentialsDao.saveAndFlush(credential);
+        return credentialsRepo.saveAndFlush(credential);
     }
 
     @Override
     public List<Credentials> getAllCredentialsList() {
-        return credentialsDao.findAll();
+        return credentialsRepo.findAll();
     }
 
     @Override
     public Optional<Credentials> getCredential(CredentialsCID credentialsCID) {
-        return credentialsDao.findById(credentialsCID);
+        return credentialsRepo.findById(credentialsCID);
     }
 
     @Override
     public void deleteCredential(CredentialsCID credentialsCID) {
-        credentialsDao.deleteById(credentialsCID);
+        credentialsRepo.deleteById(credentialsCID);
     }
 }

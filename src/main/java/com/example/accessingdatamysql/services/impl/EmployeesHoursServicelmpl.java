@@ -1,6 +1,6 @@
 package com.example.accessingdatamysql.services.impl;
 
-import com.example.accessingdatamysql.dao.EmployeesHoursDao;
+import com.example.accessingdatamysql.repositories.EmployeesHoursRepo;
 import com.example.accessingdatamysql.model.EmployeesHours;
 import com.example.accessingdatamysql.model.compositeIDs.EmployeesHoursCID;
 import com.example.accessingdatamysql.services.EmployeesHoursService;
@@ -13,28 +13,28 @@ import java.util.Optional;
 @Service
 public class EmployeesHoursServicelmpl implements EmployeesHoursService {
     @Autowired
-    private EmployeesHoursDao employeeshoursDao;
+    private EmployeesHoursRepo employeeshoursRepo;
 
     @Override
     public EmployeesHours saveEmployeesHours(EmployeesHours employeesHours) {
-        return employeeshoursDao.save(employeesHours);
+        return employeeshoursRepo.save(employeesHours);
     }
 
     @Override
     public EmployeesHours updateEmployeesHours(EmployeesHours employeeshours) {
-        return employeeshoursDao.saveAndFlush(employeeshours);
+        return employeeshoursRepo.saveAndFlush(employeeshours);
     }
 
     @Override
     public List<EmployeesHours> getAllEmployeesHoursList() {
-        return employeeshoursDao.findAll();
+        return employeeshoursRepo.findAll();
     }
 
     @Override
     public Optional<EmployeesHours> getEmployeesHours(EmployeesHoursCID employeesHoursCID) {
-        return employeeshoursDao.findById(employeesHoursCID);
+        return employeeshoursRepo.findById(employeesHoursCID);
     }
 
     @Override
-    public void deleteEmployeesHours(EmployeesHoursCID employeesHoursCID) { employeeshoursDao.deleteById(employeesHoursCID); }
+    public void deleteEmployeesHours(EmployeesHoursCID employeesHoursCID) { employeeshoursRepo.deleteById(employeesHoursCID); }
 }

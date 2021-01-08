@@ -25,8 +25,25 @@ public class Leaves {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-mm-dd")
     private Date leave_date;
 
+    @Column(name = "duration")
+    private int duration;
+
+    @Column(name = "reason")
+    private String reason;
+
     @Column(name = "eid")
     private int eid;
+
+    public Leaves() {
+    }
+
+    public Leaves(int lid, Date leave_date, int duration, String reason, int eid) {
+        this.lid = lid;
+        this.leave_date = leave_date;
+        this.duration = duration;
+        this.reason = reason;
+        this.eid = eid;
+    }
 
     public int getLid() {
         return lid;
@@ -42,6 +59,22 @@ public class Leaves {
 
     public void setLeave_date(Date leave_date) {
         this.leave_date = leave_date;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
     }
 
     public int getEid() {

@@ -1,6 +1,6 @@
 package com.example.accessingdatamysql.services.impl;
 
-import com.example.accessingdatamysql.dao.EmployeesDao;
+import com.example.accessingdatamysql.repositories.EmployeesRepo;
 import com.example.accessingdatamysql.model.Employees;
 import com.example.accessingdatamysql.services.EmployeesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,31 +11,45 @@ import java.util.Optional;
 
 @Service
 public class EmployeesServiceImpl implements EmployeesService {
+
     @Autowired
-    private EmployeesDao employeesDao;
+    private EmployeesRepo employeesRepo;
 
     @Override
     public Employees saveEmployee(Employees employee) {
-        return employeesDao.save(employee);
+        return employeesRepo.save(employee);
     }
 
     @Override
     public Employees updateEmployee(Employees employee) {
-        return employeesDao.saveAndFlush(employee);
+        return employeesRepo.saveAndFlush(employee);
     }
 
     @Override
     public List<Employees> getAllEmployeesList() {
-        return employeesDao.findAll();
+        return employeesRepo.findAll();
     }
 
     @Override
     public Optional<Employees> getEmployee(int eid) {
-        return employeesDao.findById(eid);
+        return employeesRepo.findById(eid);
     }
 
     @Override
     public void deleteEmployee(int eid) {
-        employeesDao.deleteById(eid);
+        employeesRepo.deleteById(eid);
     }
+
+//    @Override
+//    public List<Employees> getCustomErgazomenoi() {
+//        return null;
+//    }
+
+//    @Override
+//    public List<EmployeesCustomDTO> getCustomErgazomenoi() {
+////        EntityManager entityManager;
+////        List<EmployeesCustomDTO> employeesCustomDTOS = entityManager.createNamedQuery("findAllCustomEmployees");
+//
+//        return employeesRepo.getCustomErgazomenoi();
+//    }
 }

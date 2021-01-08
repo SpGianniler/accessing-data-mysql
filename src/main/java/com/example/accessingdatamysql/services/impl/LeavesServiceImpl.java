@@ -1,6 +1,6 @@
 package com.example.accessingdatamysql.services.impl;
 
-import com.example.accessingdatamysql.dao.LeavesDao;
+import com.example.accessingdatamysql.repositories.LeavesRepo;
 import com.example.accessingdatamysql.model.Leaves;
 import com.example.accessingdatamysql.services.LeavesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,30 +13,30 @@ import java.util.Optional;
 public class LeavesServiceImpl implements LeavesService {
 
     @Autowired
-    private LeavesDao leavesDao;
+    private LeavesRepo leavesRepo;
 
     @Override
     public Leaves saveLeave(Leaves leave) {
-        return leavesDao.save(leave);
+        return leavesRepo.save(leave);
     }
 
     @Override
     public Leaves updateLeave(Leaves leave) {
-        return leavesDao.saveAndFlush(leave);
+        return leavesRepo.saveAndFlush(leave);
     }
 
     @Override
     public List<Leaves> getAllLeavesList() {
-        return leavesDao.findAll();
+        return leavesRepo.findAll();
     }
 
     @Override
     public Optional<Leaves> getLeave(int lid) {
-        return leavesDao.findById(lid);
+        return leavesRepo.findById(lid);
     }
 
     @Override
     public void deleteLeave(int lid) {
-        leavesDao.deleteById(lid);
+        leavesRepo.deleteById(lid);
     }
 }

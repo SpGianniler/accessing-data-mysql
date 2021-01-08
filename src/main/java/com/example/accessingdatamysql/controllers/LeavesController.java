@@ -24,7 +24,7 @@ public class LeavesController {
         return leavesService.updateLeave(leave);
     }
 
-    @GetMapping("/all-leaves")
+    @GetMapping("/all")
     public List<Leaves>getAllLeaves(){
         return leavesService.getAllLeavesList();
     }

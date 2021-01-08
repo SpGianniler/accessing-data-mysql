@@ -21,7 +21,7 @@ public class EmployeesHoursController {
     @PutMapping("/update")
     private EmployeesHours updateEmployeesHours(EmployeesHours employeesHours) {return employeesHoursService.updateEmployeesHours(employeesHours);}
 
-    @GetMapping("/all-employees-hours")
+    @GetMapping("/all")
     public List<EmployeesHours> getAllEmployeesHour(){
         return employeesHoursService.getAllEmployeesHoursList();
     }

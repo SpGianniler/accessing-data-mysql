@@ -26,7 +26,7 @@ public class JobsController {
         return jobsService.updateJob(job);
     }
 
-    @GetMapping("/all-jobs")
+    @GetMapping("/all")
     public List<Jobs> getAllJobs(){
         return jobsService.getAllJobsList();
     }
