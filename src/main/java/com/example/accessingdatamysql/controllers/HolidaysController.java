@@ -30,7 +30,7 @@ public class HolidaysController {
         return holidaysService.getAllHolidaysList();
     }
 
-    @GetMapping("/job/{hid}")
+    @GetMapping("/holiday/{hid}")
     public Optional<Holidays> getHoliday(@PathVariable(name = "hid") int hid) {
         return holidaysService.getHoliday(hid);
     }

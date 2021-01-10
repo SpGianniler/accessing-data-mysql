@@ -1,7 +1,6 @@
 package com.example.accessingdatamysql.services.impl;
 
 import com.example.accessingdatamysql.model.Holidays;
-import com.example.accessingdatamysql.model.Jobs;
 import com.example.accessingdatamysql.repositories.HolidaysRepo;
 import com.example.accessingdatamysql.services.HolidaysService;
 import org.springframework.beans.factory.annotation.Autowired;

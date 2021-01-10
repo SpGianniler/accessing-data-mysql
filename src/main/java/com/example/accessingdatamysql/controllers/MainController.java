@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
     @GetMapping("/")
-    String greeting(){
+    public String greeting(){
         return "This is an api for an android project";
     }
 
