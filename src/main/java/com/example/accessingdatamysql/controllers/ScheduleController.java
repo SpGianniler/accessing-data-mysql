@@ -32,7 +32,7 @@ public class ScheduleController {
     }
 
     @GetMapping("/schedule/{id}")
-    public Optional<Schedule> getSchedule(@PathVariable(name = "hid") int id) {
+    public Optional<Schedule> getSchedule(@PathVariable(name = "id") int id) {
         return scheduleService.getSchedule(id);
     }
 
