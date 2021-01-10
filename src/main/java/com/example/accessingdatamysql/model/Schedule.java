@@ -1,11 +1,9 @@
 package com.example.accessingdatamysql.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name = "schedule")
@@ -18,8 +16,7 @@ public class Schedule {
     private int id;
 
     @Column(name = "date")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-mm-dd")
-    private Date date;
+    private String date;
 
     @Column(name = "shift_name")
     private String shift_name;
@@ -33,7 +30,7 @@ public class Schedule {
     public Schedule() {
     }
 
-    public Schedule(int id, Date date, String shift_name, int eid, String schedule_name) {
+    public Schedule(int id, String date, String shift_name, int eid, String schedule_name) {
         this.id = id;
         this.date = date;
         this.shift_name = shift_name;
@@ -49,11 +46,11 @@ public class Schedule {
         this.id = id;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
