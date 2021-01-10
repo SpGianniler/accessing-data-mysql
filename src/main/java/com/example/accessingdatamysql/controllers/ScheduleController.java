@@ -1,12 +1,13 @@
 package com.example.accessingdatamysql.controllers;
 
-import com.example.accessingdatamysql.model.Schedule;
-import com.example.accessingdatamysql.services.ScheduleService;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
+import com.example.accessingdatamysql.model.Schedule;
+import com.example.accessingdatamysql.services.ScheduleService;
 
 @RequestMapping("schedule")
 @RestController
@@ -36,7 +37,7 @@ public class ScheduleController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteSchedule(@PathVariable(name = "hid") int id) {
+    public void deleteSchedule(@PathVariable(name = "id") int id) {
         scheduleService.deleteSchedule(id);
     }
 }
