@@ -40,17 +40,4 @@ public class JobsController {
     public void deleteJob(@PathVariable(name = "jid") int jid) {
         jobsService.deleteJob(jid);
     }
-
-//    @PostMapping(path="/add-job")
-//    public String addNewJob(@RequestParam String job_name){
-//        Jobs j = new Jobs();
-//        j.setName(job_name);
-//        jobsDao.save(j);
-//        return "Job Saved";
-//    }
-//
-//    @GetMapping(path="/all-jobs")
-//    public Iterable<Jobs> getAllJobs(){
-//        return jobsDao.findAll();
-//    }
 }
