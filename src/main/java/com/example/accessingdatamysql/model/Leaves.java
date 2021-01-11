@@ -22,8 +22,7 @@ public class Leaves {
     private int lid;
 
     @Column(name = "leave_date")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-mm-dd")
-    private Date leave_date;
+    private String leave_date;
 
     @Column(name = "duration")
     private int duration;
@@ -37,7 +36,7 @@ public class Leaves {
     public Leaves() {
     }
 
-    public Leaves(int lid, Date leave_date, int duration, String reason, int eid) {
+    public Leaves(int lid, String leave_date, int duration, String reason, int eid) {
         this.lid = lid;
         this.leave_date = leave_date;
         this.duration = duration;
@@ -53,11 +52,11 @@ public class Leaves {
         this.lid = lid;
     }
 
-    public Date getLeave_date() {
+    public String getLeave_date() {
         return leave_date;
     }
 
-    public void setLeave_date(Date leave_date) {
+    public void setLeave_date(String leave_date) {
         this.leave_date = leave_date;
     }
 
@@ -85,7 +84,7 @@ public class Leaves {
         this.eid = eid;
     }
 
-    public boolean checkForTheRightDate() {
-        return ChronoUnit.DAYS.between(LocalDate.now(), (java.time.temporal.Temporal) this.leave_date) > 0;
-    }
+//    public boolean checkForTheRightDate() {
+//        return ChronoUnit.DAYS.between(LocalDate.now(), (java.time.temporal.Temporal) this.leave_date) > 0;
+//    }
 }
