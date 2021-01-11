@@ -12,12 +12,10 @@ import java.util.Date;
 public class Contracts {
     @Id
     @Column(name = "start_date")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    private Date start_date;
+    private String start_date;
 
     @Column(name = "end_date")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    private Date end_date;
+    private String end_date;
 
     @Column(name = "type")
     private String type;
@@ -28,19 +26,19 @@ public class Contracts {
     @Column(name = "eid")
     private int eid;
 
-    public Date getStart_date() {
+    public String getStart_date() {
         return start_date;
     }
 
-    public void setStart_date(Date start_date) {
+    public void setStart_date(String start_date) {
         this.start_date = start_date;
     }
 
-    public Date getEnd_date() {
+    public String getEnd_date() {
         return end_date;
     }
 
-    public void setEnd_date(Date end_date) {
+    public void setEnd_date(String end_date) {
         this.end_date = end_date;
     }
 
@@ -82,19 +80,19 @@ public class Contracts {
         return this.hours;
     }
 
-    public void endOfContract(){
-        //if(contractIsActive())
-        if(ChronoUnit.DAYS.between(LocalDate.now(), (java.time.temporal.Temporal) this.end_date)<=0){
-            // TODO: 07/12/2020 send notification to admin and corresponding employee
-        }
-    }
-
-    public boolean contractIsActive(){
-        // TODO: 08/12/2020 create a boolean field in the contracts table to check if the contract is active or not
-        return true;
-    }
-
-    public boolean compareStartToEndDate(){
-        return !this.start_date.after(end_date);
-    }
+//    public void endOfContract(){
+//        //if(contractIsActive())
+//        if(ChronoUnit.DAYS.between(LocalDate.now(), (java.time.temporal.Temporal) this.end_date)<=0){
+//            // TODO: 07/12/2020 send notification to admin and corresponding employee
+//        }
+//    }
+//
+//    public boolean contractIsActive(){
+//        // TODO: 08/12/2020 create a boolean field in the contracts table to check if the contract is active or not
+//        return true;
+//    }
+//
+//    public boolean compareStartToEndDate(){
+//        return !this.start_date.after(end_date);
+//    }
 }
