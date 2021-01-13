@@ -31,6 +31,14 @@ public class EmployeesHoursCID implements Serializable {
         this.sid = sid;
     }
 
+    public EmployeesHoursCID() {
+    }
+
+    public EmployeesHoursCID(int eid, int sid) {
+        this.eid = eid;
+        this.sid = sid;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

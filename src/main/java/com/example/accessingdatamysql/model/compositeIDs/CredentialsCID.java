@@ -15,6 +15,14 @@ public class CredentialsCID implements Serializable {
 
     private byte is_admin;
 
+    public CredentialsCID() {
+    }
+
+    public CredentialsCID(String username, byte is_admin) {
+        this.username = username;
+        this.is_admin = is_admin;
+    }
+
     public String getUsername() {
         return username;
     }

@@ -34,6 +34,14 @@ public class Shifts {
         this.shift_name = shift_name;
     }
 
+    public Shifts() {
+    }
+
+    public Shifts(int sid, String shift_name) {
+        this.sid = sid;
+        this.shift_name = shift_name;
+    }
+
     public String checkShiftsDetails()
     {
         try{

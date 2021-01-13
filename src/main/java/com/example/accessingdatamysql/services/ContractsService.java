@@ -13,7 +13,7 @@ public interface ContractsService {
 
     List<Contracts> getAllContractsList();
 
-    Optional<Contracts> getContract(Date start_date);
+    Optional<Contracts> getContract(String start_date);
 
-    void deleteContract(Date jid);
+    void deleteContract(String start_date);
 }

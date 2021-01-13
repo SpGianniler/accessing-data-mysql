@@ -32,12 +32,12 @@ public class ContractsController {
     }
 
     @GetMapping("/job/{start_date}")
-    public Optional<Contracts> getContract(@PathVariable(name = "start_date") Date start_date) {
+    public Optional<Contracts> getContract(@PathVariable(name = "start_date") String start_date) {
         return contractsService.getContract(start_date);
     }
 
     @DeleteMapping("/delete/{start_date}")
-    public void deleteContract(@PathVariable(name = "start_date") Date start_date) {
+    public void deleteContract(@PathVariable(name = "start_date") String start_date) {
         contractsService.deleteContract(start_date);
     }
 

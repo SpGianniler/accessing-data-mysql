@@ -23,6 +23,14 @@ public class Jobs {
     @Column(name = "job_name")
     private String job_name;
 
+    public Jobs() {
+    }
+
+    public Jobs(int jid, String job_name) {
+        this.jid = jid;
+        this.job_name = job_name;
+    }
+
     public int getJid() {
         return jid;
     }
