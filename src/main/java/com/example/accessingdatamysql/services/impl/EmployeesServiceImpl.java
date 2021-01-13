@@ -39,17 +39,4 @@ public class EmployeesServiceImpl implements EmployeesService {
     public void deleteEmployee(int eid) {
         employeesRepo.deleteById(eid);
     }
-
-//    @Override
-//    public List<Employees> getCustomErgazomenoi() {
-//        return null;
-//    }
-
-//    @Override
-//    public List<EmployeesCustomDTO> getCustomErgazomenoi() {
-////        EntityManager entityManager;
-////        List<EmployeesCustomDTO> employeesCustomDTOS = entityManager.createNamedQuery("findAllCustomEmployees");
-//
-//        return employeesRepo.getCustomErgazomenoi();
-//    }
 }

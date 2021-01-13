@@ -6,7 +6,6 @@ import com.example.accessingdatamysql.services.ContractsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,12 +30,12 @@ public class ContractsServiceImpl implements ContractsService {
     }
 
     @Override
-    public Optional<Contracts> getContract(Date start_date) {
+    public Optional<Contracts> getContract(String start_date) {
         return contractsRepo.findById(start_date);
     }
 
     @Override
-    public void deleteContract(Date start_date) {
+    public void deleteContract(String start_date) {
         contractsRepo.deleteById(start_date);
     }
 }

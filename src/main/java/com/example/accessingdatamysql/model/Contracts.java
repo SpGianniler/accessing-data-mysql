@@ -80,7 +80,18 @@ public class Contracts {
         return this.hours;
     }
 
-//    public void endOfContract(){
+    public Contracts() {
+    }
+
+    public Contracts(String start_date, String end_date, String type, int hours, int eid) {
+        this.start_date = start_date;
+        this.end_date = end_date;
+        this.type = type;
+        this.hours = hours;
+        this.eid = eid;
+    }
+
+    //    public void endOfContract(){
 //        //if(contractIsActive())
 //        if(ChronoUnit.DAYS.between(LocalDate.now(), (java.time.temporal.Temporal) this.end_date)<=0){
 //            // TODO: 07/12/2020 send notification to admin and corresponding employee

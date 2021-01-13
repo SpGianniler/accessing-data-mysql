@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class EmployeesServiceImplTest {
@@ -25,11 +25,13 @@ public class EmployeesServiceImplTest {
     private EmployeesRepo employeesRepo;
 
     private Employees employees;
+    private Employees employees1;
     private List<Employees> employeesList = new ArrayList<>();
 
     @Before
     public void setup(){
         employees = new Employees(1,"asa","dd", new Date(),2);
+        employees1 = new Employees(1,"ada","cc", new Date(),3);
         employeesList = Arrays.asList(employees,employees);
     }
 
@@ -41,6 +43,8 @@ public class EmployeesServiceImplTest {
 
     @org.junit.Test
     public void updateEmployee() {
+        when(employeesRepo.saveAndFlush(employees1)).thenReturn(employees1);
+        assertEquals(employees1,employeesService.updateEmployee(employees1));
     }
 
     @org.junit.Test
@@ -51,13 +55,7 @@ public class EmployeesServiceImplTest {
 
     @org.junit.Test
     public void getEmployee() {
-    }
-
-    @org.junit.Test
-    public void deleteEmployee() {
-    }
-
-    @org.junit.Test
-    public void getCustomErgazomenoi() {
+        when(employeesRepo.findById(1)).thenReturn(java.util.Optional.ofNullable(employees));
+        assertEquals(java.util.Optional.ofNullable(employees),employeesService.getEmployee(1));
     }
 }

@@ -34,7 +34,7 @@ public class ShiftsController {
         return shiftsService.getShift(sid);
     }
 
-    @DeleteMapping("/shift/{sid}")
+    @DeleteMapping("/delete/{sid}")
     public void deleteShift(@PathVariable(name = "sid")int sid){
         shiftsService.deleteShift(sid);
     }

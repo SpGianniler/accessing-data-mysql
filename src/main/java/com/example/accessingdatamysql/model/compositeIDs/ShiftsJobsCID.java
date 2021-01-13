@@ -31,6 +31,14 @@ public class ShiftsJobsCID implements Serializable {
         this.jid = jid;
     }
 
+    public ShiftsJobsCID() {
+    }
+
+    public ShiftsJobsCID(int sid, int jid) {
+        this.sid = sid;
+        this.jid = jid;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {return true;}
